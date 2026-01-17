@@ -1,0 +1,17 @@
+# Robots.txt for Autoscuola Magionese
+# https://www.autoscuolamagionese.it
+
+User-agent: *
+Allow: /
+
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /dashboard/
+Disallow: /istruttore/
+Disallow: /api/
+
+# Allow specific API endpoints for SEO
+Allow: /api/og
+
+# Sitemap
+Sitemap: https://www.autoscuolamagionese.it/sitemap.xml

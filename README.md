@@ -1,36 +1,120 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Autoscuola Magionese - Sito Web
 
-## Getting Started
+Sito web completo per un'autoscuola italiana con Next.js 14, TypeScript e Tailwind CSS.
 
-First, run the development server:
+---
+
+## 🚀 Quick Start (Per sviluppatori)
+
+### Prerequisiti
+- **Node.js** 18+ (scaricalo da [nodejs.org](https://nodejs.org))
+- **npm** (incluso con Node.js)
+- **Git** (opzionale, per clonare)
+
+### Installazione
 
 ```bash
+# 1. Entra nella cartella del progetto
+cd autoscuola-magionese
+
+# 2. Installa le dipendenze
+npm install
+
+# 3. Crea il file delle variabili d'ambiente
+cp .env.example .env.local
+
+# 4. Avvia il server di sviluppo
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Il sito sarà disponibile su **http://localhost:3000**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📁 Struttura del Progetto
 
-## Learn More
+```
+autoscuola-magionese/
+├── app/                    # Pagine (Next.js App Router)
+│   ├── page.tsx           # Homepage
+│   ├── login/             # Pagina login
+│   ├── registrazione/     # Pagina registrazione
+│   ├── iscrizione/        # Form iscrizione multi-step
+│   ├── dashboard/         # Dashboard studente
+│   ├── admin/             # Dashboard admin
+│   ├── patenti/           # Pagine patenti (AM, A1, A2, A, B, BE)
+│   ├── corsi/             # Pagine corsi professionali
+│   ├── contatti/          # Pagina contatti
+│   ├── sedi/              # Pagina sedi
+│   └── api/               # API Routes (backend)
+├── components/
+│   ├── ui/                # Componenti riutilizzabili (Button, Card, etc.)
+│   └── layout/            # Header, Footer, WhatsApp button
+├── lib/                   # Utility e configurazioni
+├── public/
+│   └── images/            # Immagini (logo, foto)
+├── types/                 # TypeScript types
+└── supabase/              # Schema database e dati demo
+```
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## ✏️ Come Modificare
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Cambiare Testi
+Apri il file della pagina che vuoi modificare (es. `app/page.tsx`) e cerca il testo da cambiare.
 
-## Deploy on Vercel
+### Cambiare Colori
+Modifica `tailwind.config.ts` nella sezione `colors`.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Cambiare Logo/Immagini
+Sostituisci i file in `public/images/`:
+- `logo.png` - Logo dell'autoscuola
+- `hero-driving.jpg` - Immagine hero homepage
+- `classroom.jpg` - Immagine aula teoria
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 🛠️ Comandi Disponibili
+
+| Comando | Descrizione |
+|---------|-------------|
+| `npm run dev` | Avvia server sviluppo (http://localhost:3000) |
+| `npm run build` | Crea build di produzione |
+| `npm run start` | Avvia server produzione |
+| `npm run lint` | Controlla errori nel codice |
+
+---
+
+## 🔧 Configurazione Avanzata
+
+### Variabili d'Ambiente (.env.local)
+
+```env
+# Supabase (database)
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_anon_key
+
+# Stripe (pagamenti)
+NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=your_stripe_pk
+STRIPE_SECRET_KEY=your_stripe_sk
+
+# URL del sito
+NEXT_PUBLIC_APP_URL=http://localhost:3000
+```
+
+### Per andare in produzione
+1. Crea un progetto su [Supabase](https://supabase.com)
+2. Esegui le migration in `supabase/migrations/001_initial_schema.sql`
+3. Crea un account [Stripe](https://stripe.com) per i pagamenti
+4. Deploy su [Vercel](https://vercel.com) (consigliato per Next.js)
+
+---
+
+## 📞 Supporto
+
+Per domande sul codice, contatta il team di sviluppo.
+
+---
+
+**Stack**: Next.js 14 | TypeScript | Tailwind CSS | Supabase | Stripe
