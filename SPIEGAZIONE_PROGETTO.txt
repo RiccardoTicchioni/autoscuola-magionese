@@ -1,0 +1,66 @@
+DOCUMENTAZIONE TECNICA: AUTOSCUOLA MAGIONESE WEBSITE
+
+1. PANORAMICA DEL PROGETTO
+Il progetto consiste in un'applicazione web moderna e responsiva per l'Autoscuola Magionese. L'obiettivo principale è fornire informazioni su patenti, corsi e sedi, oltre a gestire le iscrizioni online e offrire un'area riservata (dashboard) per gli studenti (es. per quiz o prenotazioni guide).
+
+2. STACK TECNOLOGICO
+Il progetto è costruito su tecnologie web moderne per garantire performance, scalabilità e manutenibilità.
+
+- **Framework Frontend**: Next.js 16 (App Router)
+- **Libreria UI**: React 19
+- **Linguaggio**: TypeScript
+- **Styling**: Tailwind CSS 4 (con PostCSS)
+- **Backend / Database / Auth**: Supabase (utilizzando @supabase/ssr per il server-side rendering e @supabase/supabase-js per il client)
+- **Modulistica & Validazione**: React Hook Form + Zod
+- **Pagamenti**: Integrazione Stripe (@stripe/stripe-js, stripe)
+- **Mappe**: React Leaflet (per la visualizzazione delle sedi)
+- **Email Transactional**: Resend
+- **Gestione Stato**: Zustand
+- **Utility**: clsx, tailwind-merge, date-fns, lucide-react (icone)
+
+3. STRUTTURA DEL PROGETTO (Cartella: autoscuola-magionese)
+
+A. CORE CONFIGURATION
+- `next.config.ts`: Configurazione di Next.js, include la gestione delle immagini remote (Supabase Storage) e header di sicurezza (CSP).
+- `package.json`: Definizione delle dipendenze e script di avvio.
+- `tailwind.config.ts`: Configurazione del sistema di design (colori primary/secondary, font, estensioni del tema).
+- `tsconfig.json`: Configurazione TypeScript.
+
+B. ROUTING & PAGINE (`app/`)
+N.B. Il progetto usa l'App Router di Next.js.
+- `layout.tsx`: Layout principale. Include configurazione SEO (Metadata, OpenGraph), font (Inter, Outfit), e componenti strutturali globali (Header, Footer, ToastProvider, WhatsAppButton, CookieBanner).
+- `page.tsx`: Landing page principale. Strutturata in sezioni: Hero (con CTA), Patenti (grid), Corsi, Perchè sceglierci, Recensioni, FAQ, Mappa e CTA finale.
+- `iscrizione/`: Area per il flusso di iscrizione online (probabilmente multi-step form integrato con Stripe).
+- `dashboard/`: Area riservata agli utenti loggati (studenti).
+- `login/` & `registrazione/`: Pagine di autenticazione gestite con Supabase Auth.
+- `contatti/`, `sedi/`, `privacy/`: Pagine informative statiche.
+- `api/`: Endpoint API server-side (Next.js API Routes / Server Actions).
+- `admin/`: Probabile pannello di amministrazione per gestire utenti/corsi.
+
+C. COMPONENTI (`components/`)
+Organizzati per funzionalità:
+- `ui/`: Componenti base riutilizzabili (design system atomico come Button, Card, Badge, Input - probabilmente basati su shadcn/ui o similare).
+- `layout/`: Componenti strutturali come Header, Footer, Sidebar.
+- `forms/`: Componenti specifici per i form (login, iscrizione).
+- `booking/`: Componenti per il sistema di prenotazione guide.
+- `quiz/`: Componenti per l'interfaccia dei quiz.
+
+D. LOGICA & UTILS (`lib/`)
+- `lib/supabase/`: Contiene i client per la connessione a Supabase (client.ts per client-side, server.ts per server-side operations e middleware.ts per la protezione delle route).
+
+4. DETTAGLI IMPLEMENTATIVI RILEVANTI
+
+- **SEO & Performance**: Utilizzo intensivo dei componenti server di Next.js per ottimizzare il TTB (Time To Byte) e SEO. Metadata accurati configurati in `layout.tsx`.
+- **Autenticazione**: Gestita tramite Supabase Auth. È presente un middleware (`middleware.ts`) che intercetta le richieste per gestire le sessioni e proteggere le route private (dashboard/admin).
+- **Design System**: Un look & feel personalizzato con animazioni fluide (fade-in, pulse) e gradienti moderni, definiti in Tailwind.
+- **Integrazioni Esterne**: Gestione pagamenti sicuri con Stripe e mappe interattive con Leaflet.
+
+5. ISTRUZIONI PER LO SVILUPPO
+- Avvio server di sviluppo: `npm run dev` (o `yarn dev` / `pnpm dev`)
+- Linting: `npm run lint`
+- Build produzione: `npm run build`
+
+6. PROSSIMI PASSI SUGGERITI
+- Verificare la corretta configurazione delle variabili d'ambiente (.env.local) per Supabase e Stripe.
+- Implementare/Rifinire la logica di pagamento in `iscrizione/`.
+- Potenziare la dashboard studente con statistiche quiz reali se non già presenti.
