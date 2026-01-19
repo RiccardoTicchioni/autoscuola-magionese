@@ -1,0 +1,43 @@
+GUIDA ALLA PUBBLICAZIONE SU VERCEL
+
+Poiché il codice è già su GitHub, pubblicare il sito su Vercel è molto semplice. Ecco i passaggi passo dopo passo:
+
+1. CREAZIONE PROGETTO
+   - Vai su [vercel.com](https://vercel.com) ed effettua l'accesso (o registrati).
+   - Nella dashboard principale, clicca su "Add New..." -> "Project".
+   - Scegli "Import Git Repository" e seleziona il tuo account GitHub.
+   - Cerca il repository `autoscuola-magionese` e clicca su "Import".
+
+2. CONFIGURAZIONE DEL PROGETTO
+   Vercel riconoscerà automaticamente che si tratta di un progetto Next.js.
+   
+   - **Framework Preset**: Lascia "Next.js".
+   - **Root Directory**: Probabilmente Vercel la rileverà automaticamente, o vedrai `autoscuola-magionese`. Se il repository contiene solo la cartella del progetto nella root, non devi toccare nulla. Se la cartella del progetto è una sottocartella, clicca "Edit" e seleziona la cartella `autoscuola-magionese`.
+
+3. VARIABILI D'AMBIENTE (Environment Variables)
+   Questa è la parte più importante. Il sito per funzionare correttamente ha bisogno delle chiavi per Supabase, Stripe, ecc.
+   Espandi la sezione "Environment Variables" e inserisci le seguenti chiavi (puoi copiare i valori dal tuo file `.env.local` locale se lo hai, o crearne di nuovi dai rispettivi servizi):
+
+   | Chiave | Descrizione |
+   |--------|-------------|
+   | `NEXT_PUBLIC_SUPABASE_URL` | URL del tuo progetto Supabase |
+   | `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Chiave pubblica Anon di Supabase |
+   | `SUPABASE_SERVICE_ROLE_KEY` | Chiave segreta Service Role di Supabase (ATTENZIONE: non serve lato client, ma utile lato server) |
+   | `STRIPE_SECRET_KEY` | Chiave segreta di Stripe |
+   | `NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY` | Chiave pubblica di Stripe |
+   | `STRIPE_WEBHOOK_SECRET` | Secret del Webhook di Stripe (per ricevere conferme pagamenti) |
+   | `RESEND_API_KEY` | Chiave API di Resend per inviare email |
+   | `EMAIL_FROM` | Indirizzo mittente (es. noreply@tiodominio.it) |
+   | `NEXT_PUBLIC_APP_URL` | L'URL del sito (inizialmente puoi mettere quello che ti darà Vercel, es. https://autoscuola-magionese.vercel.app, poi aggiornalo) |
+
+4. DEPLOY
+   - Clicca su "Deploy".
+   - Vercel inizierà a costruire il sito. Se tutto è corretto, in un paio di minuti vedrai la scritta "Congratulations!".
+   - Cliccando sull'immagine di anteprima andrai al tuo sito live.
+
+5. DOPO IL DEPLOY
+   - Vai nelle impostazioni del progetto su Vercel -> "Domains" se vuoi collegare un dominio personalizzato (es. www.autoscuolamagionese.it).
+   - Aggiorna la variabile `NEXT_PUBLIC_APP_URL` nelle impostazioni di Vercel con il dominio definitivo.
+   - Aggiorna anche su Supabase (Authentication -> URL Configuration) il "Site URL" e i "Redirect URLs" con il nuovo dominio di Vercel.
+
+Se hai bisogno di aiuto per recuperare le chiavi dai vari servizi (Supabase, Stripe, etc.), fammi sapere!
