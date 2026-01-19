@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { Button, Input, Card, CardContent } from '@/components/ui';
-import { createClient } from '@/lib/supabase/client';
+import { createClient, isSupabaseConfigured } from '@/lib/supabase/client';
 
 export default function LoginContent() {
     const router = useRouter();
@@ -18,6 +18,32 @@ export default function LoginContent() {
         password: '',
     });
 
+    // Check if Supabase is configured
+    if (!isSupabaseConfigured()) {
+        return (
+            <div className="min-h-screen pt-20 flex items-center justify-center bg-gray-50 py-12 px-4">
+                <div className="w-full max-w-md text-center">
+                    <div className="w-20 h-20 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg className="w-10 h-10 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                        </svg>
+                    </div>
+                    <h1 className="text-2xl font-display font-bold text-gray-900 mb-4">
+                        Servizio temporaneamente non disponibile
+                    </h1>
+                    <p className="text-gray-600 mb-6">
+                        Il login sarà disponibile a breve. Stiamo lavorando per offrirti la migliore esperienza.
+                    </p>
+                    <Link href="/">
+                        <Button variant="primary">
+                            Torna alla home
+                        </Button>
+                    </Link>
+                </div>
+            </div>
+        );
+    }
+
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setIsLoading(true);
@@ -25,6 +51,10 @@ export default function LoginContent() {
 
         try {
             const supabase = createClient();
+            if (!supabase) {
+                setError('Servizio non disponibile.');
+                return;
+            }
             const { error } = await supabase.auth.signInWithPassword({
                 email: formData.email,
                 password: formData.password,

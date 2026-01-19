@@ -23,27 +23,26 @@ export async function POST(request: NextRequest) {
         const forwarded = request.headers.get('x-forwarded-for');
         const ip = forwarded ? forwarded.split(',')[0] : 'unknown';
 
-        // Save to database
+        // Try to save to database if Supabase is configured
         const supabase = await createClient();
-        const { error } = await supabase
-            .from('contact_submissions')
-            .insert({
-                name,
-                email,
-                phone: phone || null,
-                subject: subject || null,
-                message,
-                gdpr_consent: gdprConsent,
-                honeypot: null,
-                ip_address: ip,
-            });
+        if (supabase) {
+            const { error } = await supabase
+                .from('contact_submissions')
+                .insert({
+                    name,
+                    email,
+                    phone: phone || null,
+                    subject: subject || null,
+                    message,
+                    gdpr_consent: gdprConsent,
+                    honeypot: null,
+                    ip_address: ip,
+                });
 
-        if (error) {
-            console.error('Database error:', error);
-            return NextResponse.json(
-                { error: 'Errore nel salvataggio del messaggio' },
-                { status: 500 }
-            );
+            if (error) {
+                console.error('Database error:', error);
+                // Continue to try email even if DB fails
+            }
         }
 
         // TODO: Send email notification via Resend

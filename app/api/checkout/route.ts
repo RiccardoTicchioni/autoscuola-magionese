@@ -2,11 +2,27 @@ import { NextRequest, NextResponse } from 'next/server';
 import Stripe from 'stripe';
 import { createClient } from '@/lib/supabase/server';
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
-
 export async function POST(request: NextRequest) {
+    // Check if required services are configured
+    if (!process.env.STRIPE_SECRET_KEY) {
+        return NextResponse.json(
+            { error: 'Servizio pagamenti non disponibile' },
+            { status: 503 }
+        );
+    }
+
+    const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
+
     try {
         const supabase = await createClient();
+
+        // Check if Supabase is configured
+        if (!supabase) {
+            return NextResponse.json(
+                { error: 'Servizio non disponibile' },
+                { status: 503 }
+            );
+        }
 
         // Check if user is authenticated
         const { data: { user }, error: authError } = await supabase.auth.getUser();
