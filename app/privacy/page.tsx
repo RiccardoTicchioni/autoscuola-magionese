@@ -22,8 +22,8 @@ export default function PrivacyPage() {
                         <h2 className="text-2xl font-bold text-gray-900 mb-4">1. Titolare del Trattamento</h2>
                         <p className="text-gray-600">
                             Il Titolare del trattamento dei dati è Autoscuola Magionese S.r.l.,
-                            con sede legale in Via Roma 123, 06063 Magione (PG), P.IVA 01234567890,
-                            email: privacy@autoscuolamagionese.it
+                            con sede legale in Via Risorgimento 5, 06063 Magione (PG), P.IVA 01234567890,
+                            email: autoscuolamagionese@gmail.com
                         </p>
                     </section>
 
@@ -105,7 +105,7 @@ export default function PrivacyPage() {
                             <li>Revocare il consenso in qualsiasi momento</li>
                         </ul>
                         <p className="text-gray-600 mt-4">
-                            Per esercitare i tuoi diritti, contattaci a: privacy@autoscuolamagionese.it
+                            Per esercitare i tuoi diritti, contattaci a: autoscuolamagionese@gmail.com
                         </p>
                     </section>
 
@@ -125,9 +125,9 @@ export default function PrivacyPage() {
                             puoi contattarci a:
                         </p>
                         <ul className="list-none pl-0 text-gray-600 mt-4 space-y-1">
-                            <li><strong>Email:</strong> privacy@autoscuolamagionese.it</li>
-                            <li><strong>Telefono:</strong> 075 123 4567</li>
-                            <li><strong>Indirizzo:</strong> Via Roma 123, 06063 Magione (PG)</li>
+                            <li><strong>Email:</strong> autoscuolamagionese@gmail.com</li>
+                            <li><strong>Telefono:</strong> 330 522 814</li>
+                            <li><strong>Indirizzo:</strong> Via Risorgimento 5, 06063 Magione (PG)</li>
                         </ul>
                     </section>
 

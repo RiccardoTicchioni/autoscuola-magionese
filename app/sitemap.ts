@@ -11,6 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         '/patenti/a1',
         '/patenti/a2',
         '/patenti/a',
+        '/patenti/b1',
         '/patenti/b',
         '/patenti/b96',
         '/patenti/be',

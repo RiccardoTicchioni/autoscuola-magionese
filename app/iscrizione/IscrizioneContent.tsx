@@ -10,15 +10,16 @@ const services = [
     { id: 'patente-a1', name: 'Patente A1', icon: '🏍️' },
     { id: 'patente-a2', name: 'Patente A2', icon: '🏍️' },
     { id: 'patente-a', name: 'Patente A', icon: '🏍️' },
-    { id: 'patente-be', name: 'Patente BE', icon: '🚙' },
+    { id: 'patente-b1', name: 'Patente B1', icon: '🚙' },
+    { id: 'patente-b', name: 'Patente B', icon: '🚗' },
     { id: 'cqc-persone', name: 'CQC Persone', icon: '🚌' },
     { id: 'cqc-merci', name: 'CQC Merci', icon: '🚛' },
     { id: 'recupero-punti', name: 'Recupero Punti', icon: '📊' },
 ];
 
 const branches = [
-    { value: 'centro', label: 'Sede Centro - Via Roma 123' },
-    { value: 'industriale', label: 'Sede Zona Industriale - Via dell\'Industria 45' },
+    { value: 'centro', label: 'Autoscuola Magionese - Via Risorgimento 5' },
+    { value: 'industriale', label: 'Autoscuola Etrusca - Piazza dei Navigatori 34B' },
 ];
 
 type Step = 1 | 2 | 3;

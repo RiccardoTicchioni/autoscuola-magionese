@@ -17,6 +17,7 @@ const navigation = [
             { name: 'Patente A1 (125cc)', href: '/patenti/a1' },
             { name: 'Patente A2 (Moto)', href: '/patenti/a2' },
             { name: 'Patente A (Moto illimitata)', href: '/patenti/a' },
+            { name: 'Patente B1 (Quadricicli)', href: '/patenti/b1' },
             { name: 'Patente B (Auto)', href: '/patenti/b' },
             { name: 'Patente B96', href: '/patenti/b96' },
             { name: 'Patente BE (Rimorchio)', href: '/patenti/be' },

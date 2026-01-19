@@ -185,9 +185,9 @@ export default function CorsiPage() {
                                 Richiedi preventivo aziendale
                             </Button>
                         </Link>
-                        <a href="tel:+390751234567">
+                        <a href="tel:+39330522814">
                             <Button size="lg" variant="outline">
-                                Chiama ora: 075 123 4567
+                                Chiama ora: 330 522 814
                             </Button>
                         </a>
                     </div>

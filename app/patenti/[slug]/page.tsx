@@ -235,6 +235,39 @@ const patentiData: Record<string, {
         faqs: [],
         color: 'from-red-500 to-red-700',
     },
+    b1: {
+        name: 'Patente B1',
+        subtitle: 'Quadricicli Non Leggeri',
+        description: 'Abilitazione alla guida di quadricicli non leggeri.',
+        longDescription: `La patente B1 consente di guidare quadricicli non leggeri con massa a vuoto fino a 400kg (550kg per veicoli trasporto merci) e potenza fino a 15 kW.`,
+        minAge: 16,
+        icon: '🚙',
+        priceFrom: 400,
+        duration: '1-2 mesi',
+        theoryHours: 20,
+        practiceHours: 10,
+        includes: [
+            'Corso teoria',
+            'Esercitazioni pratiche',
+            'Esame teoria',
+            'Esame pratica',
+        ],
+        requirements: [
+            'Età minima 16 anni',
+            'Documento d\'identità',
+            'Certificato medico',
+            '2 foto tessera',
+            'Consenso genitori',
+        ],
+        faqs: [
+            {
+                id: '1',
+                title: 'Cosa posso guidare?',
+                content: 'Quadricicli non leggeri (es. Quad pesanti) fino a 15kW.'
+            }
+        ],
+        color: 'from-blue-400 to-blue-600',
+    },
     b96: {
         name: 'Patente B96',
         subtitle: 'Auto + Rimorchio fino a 4.250kg',

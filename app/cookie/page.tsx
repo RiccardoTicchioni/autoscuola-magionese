@@ -140,8 +140,8 @@ export default function CookiePage() {
                         <h2 className="text-2xl font-bold text-gray-900 mb-4">Contatti</h2>
                         <p className="text-gray-600">
                             Per qualsiasi domanda relativa ai cookie, contattaci a:
-                            <a href="mailto:privacy@autoscuolamagionese.it" className="text-primary-600 hover:underline ml-1">
-                                privacy@autoscuolamagionese.it
+                            <a href="mailto:autoscuolamagionese@gmail.com" className="text-primary-600 hover:underline ml-1">
+                                autoscuolamagionese@gmail.com
                             </a>
                         </p>
                     </section>

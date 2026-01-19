@@ -5,8 +5,8 @@ import { Metadata } from 'next';
 import { Button, Input, Textarea, Select, Checkbox, Card, CardContent } from '@/components/ui';
 
 const sedi = [
-    { value: 'centro', label: 'Sede Centro - Via Roma 123' },
-    { value: 'industriale', label: 'Sede Zona Industriale - Via dell\'Industria 45' },
+    { value: 'centro', label: 'Autoscuola Magionese - Via Risorgimento 5' },
+    { value: 'industriale', label: 'Autoscuola Etrusca - Piazza dei Navigatori 34B' },
 ];
 
 const motivi = [
@@ -85,11 +85,14 @@ export default function ContattiPage() {
                                             </svg>
                                         </div>
                                         <div>
-                                            <h3 className="font-semibold text-gray-900 mb-1">Telefono</h3>
-                                            <a href="tel:+390751234567" className="text-primary-600 hover:text-primary-700 font-medium">
-                                                075 123 4567
+                                            <h3 className="font-semibold text-gray-900 mb-2">Telefono</h3>
+                                            <a href="tel:+39330522814" className="text-primary-600 hover:text-primary-700 font-medium block">
+                                                330 522 814 (Loris)
                                             </a>
-                                            <p className="text-sm text-gray-500 mt-1">Lun-Ven: 9:00-19:00</p>
+                                            <a href="tel:+393491780495" className="text-primary-600 hover:text-primary-700 font-medium block mt-1">
+                                                349 178 0495 (Monica)
+                                            </a>
+                                            <p className="text-sm text-gray-500 mt-2">Lun-Ven: 9:00-19:00</p>
                                         </div>
                                     </div>
                                 </CardContent>
@@ -106,8 +109,8 @@ export default function ContattiPage() {
                                         </div>
                                         <div>
                                             <h3 className="font-semibold text-gray-900 mb-1">Email</h3>
-                                            <a href="mailto:info@autoscuolamagionese.it" className="text-primary-600 hover:text-primary-700 font-medium">
-                                                info@autoscuolamagionese.it
+                                            <a href="mailto:autoscuolamagionese@gmail.com" className="text-primary-600 hover:text-primary-700 font-medium">
+                                                autoscuolamagionese@gmail.com
                                             </a>
                                             <p className="text-sm text-gray-500 mt-1">Rispondiamo entro 24h</p>
                                         </div>
@@ -146,16 +149,16 @@ export default function ContattiPage() {
 
                                 <Card variant="outlined">
                                     <CardContent className="p-4">
-                                        <h4 className="font-semibold text-gray-900">Sede Centro</h4>
-                                        <p className="text-sm text-gray-600 mt-1">Via Roma 123, 06063 Magione (PG)</p>
+                                        <h4 className="font-semibold text-gray-900">Autoscuola Magionese</h4>
+                                        <p className="text-sm text-gray-600 mt-1">Via Risorgimento 5, 06063 Magione (PG)</p>
                                         <p className="text-xs text-gray-500 mt-2">Lun-Ven: 9:00-13:00, 15:00-19:00</p>
                                     </CardContent>
                                 </Card>
 
                                 <Card variant="outlined">
                                     <CardContent className="p-4">
-                                        <h4 className="font-semibold text-gray-900">Sede Zona Industriale</h4>
-                                        <p className="text-sm text-gray-600 mt-1">Via dell&apos;Industria 45, 06063 Magione (PG)</p>
+                                        <h4 className="font-semibold text-gray-900">Autoscuola Etrusca</h4>
+                                        <p className="text-sm text-gray-600 mt-1">Piazza dei Navigatori 34B, 06127 Perugia (PG)</p>
                                         <p className="text-xs text-gray-500 mt-2">Lun-Ven: 8:30-12:30, 14:30-18:30</p>
                                     </CardContent>
                                 </Card>

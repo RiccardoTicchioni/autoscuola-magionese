@@ -37,6 +37,14 @@ const patenti = [
     popular: false,
   },
   {
+    id: 'b1',
+    name: 'Patente B1',
+    description: 'Quadricicli non leggeri',
+    minAge: '16 anni',
+    icon: '🚙',
+    popular: false,
+  },
+  {
     id: 'b',
     name: 'Patente B',
     description: 'Autovetture e veicoli leggeri',
@@ -511,14 +519,14 @@ export default function HomePage() {
               {/* Location Cards */}
               <div className="space-y-4">
                 <div className="p-4 rounded-xl border border-gray-200 hover:border-primary-300 transition-colors">
-                  <h3 className="font-semibold text-gray-900 mb-1">Sede Centro</h3>
-                  <p className="text-gray-600 text-sm mb-2">Via Roma 123, 06063 Magione (PG)</p>
-                  <p className="text-primary-600 text-sm font-medium">Lun-Ven: 9:00-13:00, 15:00-19:00</p>
+                  <h4 className="font-semibold text-gray-900 mb-2">Autoscuola Magionese</h4>
+                  <p className="text-gray-600 text-sm mb-2">Via Risorgimento 5, 06063 Magione (PG)</p>
+                  <p className="text-gray-500 text-xs">Lun-Ven: 9:00-13:00, 15:00-19:00</p>
                 </div>
-                <div className="p-4 rounded-xl border border-gray-200 hover:border-primary-300 transition-colors">
-                  <h3 className="font-semibold text-gray-900 mb-1">Sede Zona Industriale</h3>
-                  <p className="text-gray-600 text-sm mb-2">Via dell&apos;Industria 45, 06063 Magione (PG)</p>
-                  <p className="text-primary-600 text-sm font-medium">Lun-Ven: 8:30-12:30, 14:30-18:30</p>
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-2">Autoscuola Etrusca</h4>
+                  <p className="text-gray-600 text-sm mb-2">Piazza dei Navigatori 34B, 06127 Perugia (PG)</p>
+                  <p className="text-gray-500 text-xs">Lun-Ven: 8:30-12:30, 14:30-18:30</p>
                 </div>
               </div>
 

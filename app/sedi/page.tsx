@@ -10,12 +10,12 @@ export const metadata: Metadata = {
 const sedi = [
     {
         id: 'centro',
-        name: 'Sede Centro',
-        address: 'Via Roma 123',
+        name: 'Autoscuola Magionese',
+        address: 'Via Risorgimento, 5',
         city: 'Magione (PG)',
         cap: '06063',
-        phone: '075 123 4567',
-        email: 'centro@autoscuolamagionese.it',
+        phone: '330 522 814',
+        email: 'autoscuolamagionese@gmail.com',
         hours: {
             'Lunedì': '9:00 - 13:00',
             'Martedì - Venerdì': '9:00 - 13:00, 15:00 - 19:00',
@@ -30,18 +30,18 @@ const sedi = [
     },
     {
         id: 'industriale',
-        name: 'Sede Zona Industriale',
-        address: 'Via dell\'Industria 45',
-        city: 'Magione (PG)',
-        cap: '06063',
-        phone: '075 123 4568',
-        email: 'industriale@autoscuolamagionese.it',
+        name: 'Autoscuola Etrusca',
+        address: 'Piazza dei Navigatori, 34B',
+        city: 'Perugia (PG)',
+        cap: '06127',
+        phone: '349 178 0495',
+        email: 'autoscuolaetrusca@gmail.com',
         hours: {
             'Lunedì - Venerdì': '8:30 - 12:30, 14:30 - 18:30',
             'Sabato - Domenica': 'Chiuso',
         },
-        parking: 'Ampio parcheggio privato gratuito.',
-        directions: 'Dalla E45 uscita Magione, seguire indicazioni zona industriale. La sede si trova dopo il supermercato.',
+        parking: 'Parcheggio pubblico nelle vicinanze.',
+        directions: 'Facilmente raggiungibile dal raccordo autostradale Perugia-Bettolle.',
         features: ['Pista privata', 'Aule per corsi CQC', 'Parcheggio ampio', 'Simulatore di guida'],
         lat: 43.1289,
         lng: 12.2134,
@@ -63,8 +63,8 @@ export default function SediPage() {
                         Sempre vicini a te
                     </h1>
                     <p className="text-xl text-white/80 max-w-3xl mx-auto">
-                        Due sedi a Magione per offrirti il massimo della comodità.
-                        Parcheggio gratuito e facilmente raggiungibili.
+                        Due sedi tra Magione e Perugia per offrirti il massimo della comodità.
+                        Professionalità e cortesia al tuo servizio.
                     </p>
                 </div>
             </section>
