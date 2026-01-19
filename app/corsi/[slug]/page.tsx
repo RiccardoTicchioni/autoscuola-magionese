@@ -75,33 +75,6 @@ const corsiData: Record<string, {
         ],
         color: 'from-orange-500 to-red-500',
     },
-    'adr': {
-        name: 'Corso ADR',
-        subtitle: 'Patentino Merci Pericolose',
-        description: 'Patentino per il trasporto di merci pericolose su strada.',
-        longDescription: `Il corso ADR (Accord Dangereuses Route) è obbligatorio per tutti i conducenti che trasportano merci pericolose su strada.
-
-Offriamo il corso base e le specializzazioni per cisterne, esplosivi e radioattivi.`,
-        icon: '⚠️',
-        priceFrom: 400,
-        duration: '18-36 ore',
-        includes: [
-            'Corso teorico',
-            'Materiale didattico',
-            'Esame finale',
-            'Rilascio patentino',
-        ],
-        requirements: [
-            'Patente B, C o superiore',
-            'Età minima 18 anni',
-        ],
-        modules: [
-            { title: 'Corso base', hours: 18 },
-            { title: 'Specializzazione cisterne', hours: 12 },
-            { title: 'Specializzazione esplosivi', hours: 8 },
-        ],
-        color: 'from-yellow-500 to-orange-500',
-    },
     'carta-kb': {
         name: 'Carta KB',
         subtitle: 'Abilitazione Autotrasporto Conto Terzi',

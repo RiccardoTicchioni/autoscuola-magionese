@@ -2,6 +2,7 @@ import Link from 'next/link';
 
 const footerLinks = {
     patenti: [
+        { name: 'Patente AM', href: '/patenti/am' },
         { name: 'Patente A1', href: '/patenti/a1' },
         { name: 'Patente A2', href: '/patenti/a2' },
         { name: 'Patente A', href: '/patenti/a' },
@@ -11,7 +12,6 @@ const footerLinks = {
     corsi: [
         { name: 'CQC Persone', href: '/corsi/cqc-persone' },
         { name: 'CQC Merci', href: '/corsi/cqc-merci' },
-        { name: 'ADR', href: '/corsi/adr' },
         { name: 'Recupero Punti', href: '/corsi/recupero-punti' },
     ],
     azienda: [

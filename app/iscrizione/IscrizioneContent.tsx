@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { Button, Input, Select, Card, CardContent, Checkbox } from '@/components/ui';
 
 const services = [
+    { id: 'patente-am', name: 'Patente AM', icon: '🛵' },
     { id: 'patente-b', name: 'Patente B', icon: '🚗' },
     { id: 'patente-a1', name: 'Patente A1', icon: '🏍️' },
     { id: 'patente-a2', name: 'Patente A2', icon: '🏍️' },

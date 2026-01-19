@@ -9,6 +9,19 @@ export const metadata: Metadata = {
 
 const patenti = [
     {
+        id: 'am',
+        name: 'Patente AM',
+        subtitle: 'Ciclomotori e Quadricicli Leggeri',
+        description: 'La patente AM ti permette di guidare ciclomotori a due ruote, ciclomotori a tre ruole e quadricicli leggeri con velocità massima di 45 km/h.',
+        minAge: 14,
+        icon: '🛵',
+        priceFrom: 350,
+        duration: '1-2 mesi',
+        includes: ['Corso teoria', 'Esercitazioni pratiche', 'Esame teoria', 'Esame pratica'],
+        popular: false,
+        color: 'from-blue-400 to-blue-600',
+    },
+    {
         id: 'a1',
         name: 'Patente A1',
         subtitle: 'Motocicli fino a 125cc',

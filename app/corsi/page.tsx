@@ -4,7 +4,7 @@ import { Button, Card, CardContent, Badge } from '@/components/ui';
 
 export const metadata: Metadata = {
     title: 'Corsi Professionali',
-    description: 'Corsi professionali per autisti: CQC Persone e Merci, ADR, Carta KB e Recupero Punti. Formazione certificata per il settore trasporti.',
+    description: 'Corsi professionali per autisti: CQC Persone e Merci, Carta KB e Recupero Punti. Formazione certificata per il settore trasporti.',
 };
 
 const corsi = [
@@ -29,17 +29,6 @@ const corsi = [
         duration: '140 ore',
         badge: null,
         color: 'from-orange-500 to-red-500',
-    },
-    {
-        id: 'adr',
-        name: 'Corso ADR',
-        subtitle: 'Merci Pericolose',
-        description: 'Patentino per il trasporto di merci pericolose su strada. Corso base e specializzazioni.',
-        icon: '⚠️',
-        priceFrom: 400,
-        duration: '18-36 ore',
-        badge: null,
-        color: 'from-yellow-500 to-orange-500',
     },
     {
         id: 'carta-kb',

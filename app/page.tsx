@@ -5,6 +5,14 @@ import { Button, Card, CardContent, Badge, Accordion } from '@/components/ui';
 // Service data
 const patenti = [
   {
+    id: 'am',
+    name: 'Patente AM',
+    description: 'Ciclomotori e quadricicli leggeri',
+    minAge: '14 anni',
+    icon: '🛵',
+    popular: false,
+  },
+  {
     id: 'a1',
     name: 'Patente A1',
     description: 'Motocicli fino a 125cc',
@@ -58,12 +66,6 @@ const corsi = [
     name: 'CQC Merci',
     description: 'Trasporto merci professionale',
     icon: '🚛',
-  },
-  {
-    id: 'adr',
-    name: 'Corso ADR',
-    description: 'Trasporto merci pericolose',
-    icon: '⚠️',
   },
   {
     id: 'recupero-punti',
