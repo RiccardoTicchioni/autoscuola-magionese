@@ -4,7 +4,7 @@ import { Button, Card, CardContent, Badge } from '@/components/ui';
 
 export const metadata: Metadata = {
     title: 'Corsi Professionali',
-    description: 'Corsi professionali per autisti: CQC Persone e Merci, ADR, Cronotachigrafo, Carta KB e Recupero Punti. Formazione certificata per il settore trasporti.',
+    description: 'Corsi professionali per autisti: CQC Persone e Merci, ADR, Carta KB e Recupero Punti. Formazione certificata per il settore trasporti.',
 };
 
 const corsi = [
@@ -40,17 +40,6 @@ const corsi = [
         duration: '18-36 ore',
         badge: null,
         color: 'from-yellow-500 to-orange-500',
-    },
-    {
-        id: 'cronotachigrafo',
-        name: 'Cronotachigrafo',
-        subtitle: 'Uso e Normativa',
-        description: 'Corso sull\'utilizzo corretto del cronotachigrafo digitale e sulla normativa dei tempi di guida.',
-        icon: '⏱️',
-        priceFrom: 150,
-        duration: '8 ore',
-        badge: null,
-        color: 'from-purple-500 to-indigo-500',
     },
     {
         id: 'carta-kb',
@@ -95,7 +84,7 @@ export default function CorsiPage() {
                     </h1>
                     <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                         Corsi certificati per chi lavora nel settore dei trasporti.
-                        CQC, ADR, Cronotachigrafo e molto altro.
+                        CQC, ADR, Carta KB e molto altro.
                     </p>
                 </div>
             </section>
@@ -124,15 +113,11 @@ export default function CorsiPage() {
                                         <p className="text-sm text-primary-600 font-medium mb-3">{corso.subtitle}</p>
                                         <p className="text-gray-600 text-sm mb-4">{corso.description}</p>
 
-                                        {/* Price and Duration */}
+                                        {/* Duration */}
                                         <div className="flex items-center justify-between pt-4 border-t border-gray-100">
                                             <div>
-                                                <p className="text-xs text-gray-500">A partire da</p>
-                                                <p className="text-xl font-bold text-gray-900">€{corso.priceFrom}</p>
-                                            </div>
-                                            <div className="text-right">
                                                 <p className="text-xs text-gray-500">Durata</p>
-                                                <p className="text-sm font-medium text-gray-700">{corso.duration}</p>
+                                                <p className="text-lg font-bold text-gray-900">{corso.duration}</p>
                                             </div>
                                         </div>
 

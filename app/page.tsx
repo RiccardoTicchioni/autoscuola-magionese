@@ -5,14 +5,6 @@ import { Button, Card, CardContent, Badge, Accordion } from '@/components/ui';
 // Service data
 const patenti = [
   {
-    id: 'am',
-    name: 'Patente AM',
-    description: 'Ciclomotori e quadricicli leggeri',
-    minAge: '14 anni',
-    icon: '🛵',
-    popular: false,
-  },
-  {
     id: 'a1',
     name: 'Patente A1',
     description: 'Motocicli fino a 125cc',
@@ -106,7 +98,7 @@ const faqs = [
   {
     id: '1',
     title: 'Quanto costa prendere la patente B?',
-    content: 'Il costo della patente B parte da €600 e include teoria, guide pratiche e esami. Contattaci per un preventivo personalizzato in base alle tue esigenze.',
+    content: 'Il costo della patente B include teoria, guide pratiche e esami. Contattaci per un preventivo personalizzato in base alle tue esigenze.',
   },
   {
     id: '2',
@@ -282,7 +274,7 @@ export default function HomePage() {
                 Formazione per professionisti
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Corsi CQC, ADR, Cronotachigrafo e recupero punti.
+                Corsi CQC, ADR, Carta KB e recupero punti.
                 Formazione completa per chi lavora nel settore dei trasporti.
               </p>
 

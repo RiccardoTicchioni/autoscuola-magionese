@@ -13,7 +13,6 @@ const navigation = [
         name: 'Patenti',
         href: '/patenti',
         children: [
-            { name: 'Patente AM (Ciclomotore)', href: '/patenti/am' },
             { name: 'Patente A1 (125cc)', href: '/patenti/a1' },
             { name: 'Patente A2 (Moto)', href: '/patenti/a2' },
             { name: 'Patente A (Moto illimitata)', href: '/patenti/a' },
@@ -29,7 +28,6 @@ const navigation = [
             { name: 'CQC Persone', href: '/corsi/cqc-persone' },
             { name: 'CQC Merci', href: '/corsi/cqc-merci' },
             { name: 'ADR', href: '/corsi/adr' },
-            { name: 'Cronotachigrafo', href: '/corsi/cronotachigrafo' },
             { name: 'Carta KB', href: '/corsi/carta-kb' },
             { name: 'Recupero Punti', href: '/corsi/recupero-punti' },
         ],

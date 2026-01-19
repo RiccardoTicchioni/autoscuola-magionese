@@ -102,29 +102,6 @@ Offriamo il corso base e le specializzazioni per cisterne, esplosivi e radioatti
         ],
         color: 'from-yellow-500 to-orange-500',
     },
-    'cronotachigrafo': {
-        name: 'Cronotachigrafo',
-        subtitle: 'Uso e Normativa Tempi di Guida',
-        description: 'Corso sull\'utilizzo del cronotachigrafo digitale e normativa.',
-        longDescription: `Il corso sul cronotachigrafo fornisce tutte le competenze necessarie per l\'utilizzo corretto del dispositivo e la conoscenza della normativa sui tempi di guida e riposo.`,
-        icon: '⏱️',
-        priceFrom: 150,
-        duration: '8 ore',
-        includes: [
-            'Corso teorico',
-            'Esercitazioni pratiche',
-            'Materiale didattico',
-            'Attestato di frequenza',
-        ],
-        requirements: [
-            'Patente C, D, CE, DE',
-        ],
-        modules: [
-            { title: 'Normativa tempi guida e riposo', hours: 4 },
-            { title: 'Uso pratico cronotachigrafo', hours: 4 },
-        ],
-        color: 'from-purple-500 to-indigo-500',
-    },
     'carta-kb': {
         name: 'Carta KB',
         subtitle: 'Abilitazione Autotrasporto Conto Terzi',
@@ -242,22 +219,17 @@ export default async function CorsoPage({ params }: Props) {
                             {/* Quick Stats */}
                             <div className="flex flex-wrap gap-6 mt-8">
                                 <div className="bg-white/10 backdrop-blur-sm rounded-xl px-4 py-3">
-                                    <p className="text-white/70 text-xs">A partire da</p>
-                                    <p className="text-white font-bold text-lg">€{corso.priceFrom}</p>
-                                </div>
-                                <div className="bg-white/10 backdrop-blur-sm rounded-xl px-4 py-3">
                                     <p className="text-white/70 text-xs">Durata</p>
                                     <p className="text-white font-bold text-lg">{corso.duration}</p>
                                 </div>
                             </div>
                         </div>
 
-                        {/* CTA Card */}
                         <div className="w-full lg:w-auto">
                             <Card className="bg-white/95 backdrop-blur-sm shadow-2xl">
                                 <CardContent className="p-6 text-center">
-                                    <p className="text-gray-600 mb-2">Prezzo a partire da</p>
-                                    <p className="text-4xl font-bold text-gray-900 mb-4">€{corso.priceFrom}</p>
+                                    <p className="text-gray-600 mb-2">Durata</p>
+                                    <p className="text-4xl font-bold text-gray-900 mb-4">{corso.duration}</p>
                                     <Link href="/iscrizione" className="block">
                                         <Button size="lg" variant="secondary" className="w-full mb-3">
                                             Iscriviti al Corso
@@ -351,10 +323,6 @@ export default async function CorsoPage({ params }: Props) {
                                         </div>
                                     </div>
                                     <hr className="my-4" />
-                                    <div className="flex items-center justify-between mb-4">
-                                        <span className="text-gray-600">A partire da</span>
-                                        <span className="text-2xl font-bold text-gray-900">€{corso.priceFrom}</span>
-                                    </div>
                                     <Link href="/iscrizione" className="block">
                                         <Button variant="secondary" className="w-full">
                                             Iscriviti ora

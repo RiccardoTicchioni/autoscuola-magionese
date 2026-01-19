@@ -7,7 +7,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const staticPages = [
         '',
         '/patenti',
-        '/patenti/am',
         '/patenti/a1',
         '/patenti/a2',
         '/patenti/a',
@@ -18,7 +17,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
         '/corsi/cqc-persone',
         '/corsi/cqc-merci',
         '/corsi/adr',
-        '/corsi/cronotachigrafo',
         '/corsi/carta-kb',
         '/corsi/recupero-punti',
         '/sedi',

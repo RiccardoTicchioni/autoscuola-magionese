@@ -122,7 +122,7 @@ const patentiData: Record<string, {
             {
                 id: '3',
                 title: 'Quanto costa prendere la patente B?',
-                content: 'Il nostro pacchetto base parte da €600 e include tutto il necessario. Il costo finale dipende dal numero di guide pratiche necessarie.',
+                content: 'Il costo dipende dal pacchetto scelto e dal numero di guide pratiche necessarie. Contattaci per un preventivo personalizzato.',
             },
             {
                 id: '4',
@@ -357,10 +357,6 @@ export default async function PatentePage({ params }: Props) {
                                     <p className="text-white font-bold text-lg">{patente.minAge} anni</p>
                                 </div>
                                 <div className="bg-white/10 backdrop-blur-sm rounded-xl px-4 py-3">
-                                    <p className="text-white/70 text-xs">A partire da</p>
-                                    <p className="text-white font-bold text-lg">€{patente.priceFrom}</p>
-                                </div>
-                                <div className="bg-white/10 backdrop-blur-sm rounded-xl px-4 py-3">
                                     <p className="text-white/70 text-xs">Durata media</p>
                                     <p className="text-white font-bold text-lg">{patente.duration}</p>
                                 </div>
@@ -371,8 +367,8 @@ export default async function PatentePage({ params }: Props) {
                         <div className="w-full lg:w-auto">
                             <Card className="bg-white/95 backdrop-blur-sm shadow-2xl">
                                 <CardContent className="p-6 text-center">
-                                    <p className="text-gray-600 mb-2">Prezzo a partire da</p>
-                                    <p className="text-4xl font-bold text-gray-900 mb-4">€{patente.priceFrom}</p>
+                                    <p className="text-gray-600 mb-2">Durata media</p>
+                                    <p className="text-4xl font-bold text-gray-900 mb-4">{patente.duration}</p>
                                     <Link href="/iscrizione" className="block">
                                         <Button size="lg" variant="secondary" className="w-full mb-3">
                                             Iscriviti Online
@@ -471,10 +467,6 @@ export default async function PatentePage({ params }: Props) {
                                         </div>
                                     </div>
                                     <hr className="my-4" />
-                                    <div className="flex items-center justify-between mb-4">
-                                        <span className="text-gray-600">A partire da</span>
-                                        <span className="text-2xl font-bold text-gray-900">€{patente.priceFrom}</span>
-                                    </div>
                                     <Link href="/iscrizione" className="block">
                                         <Button variant="secondary" className="w-full">
                                             Iscriviti ora

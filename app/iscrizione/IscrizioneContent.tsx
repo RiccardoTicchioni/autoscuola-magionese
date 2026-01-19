@@ -5,15 +5,14 @@ import Link from 'next/link';
 import { Button, Input, Select, Card, CardContent, Checkbox } from '@/components/ui';
 
 const services = [
-    { id: 'patente-b', name: 'Patente B', price: 600, icon: '🚗' },
-    { id: 'patente-am', name: 'Patente AM', price: 350, icon: '🛵' },
-    { id: 'patente-a1', name: 'Patente A1', price: 450, icon: '🏍️' },
-    { id: 'patente-a2', name: 'Patente A2', price: 500, icon: '🏍️' },
-    { id: 'patente-a', name: 'Patente A', price: 550, icon: '🏍️' },
-    { id: 'patente-be', name: 'Patente BE', price: 400, icon: '🚙' },
-    { id: 'cqc-persone', name: 'CQC Persone', price: 1200, icon: '🚌' },
-    { id: 'cqc-merci', name: 'CQC Merci', price: 1200, icon: '🚛' },
-    { id: 'recupero-punti', name: 'Recupero Punti', price: 180, icon: '📊' },
+    { id: 'patente-b', name: 'Patente B', icon: '🚗' },
+    { id: 'patente-a1', name: 'Patente A1', icon: '🏍️' },
+    { id: 'patente-a2', name: 'Patente A2', icon: '🏍️' },
+    { id: 'patente-a', name: 'Patente A', icon: '🏍️' },
+    { id: 'patente-be', name: 'Patente BE', icon: '🚙' },
+    { id: 'cqc-persone', name: 'CQC Persone', icon: '🚌' },
+    { id: 'cqc-merci', name: 'CQC Merci', icon: '🚛' },
+    { id: 'recupero-punti', name: 'Recupero Punti', icon: '📊' },
 ];
 
 const branches = [
@@ -83,7 +82,6 @@ export default function IscrizioneContent() {
                 body: JSON.stringify({
                     ...formData,
                     serviceName: selectedService?.name,
-                    servicePrice: selectedService?.price,
                     branchName: selectedBranch?.label,
                 }),
             });
@@ -118,7 +116,7 @@ export default function IscrizioneContent() {
                                     <li><strong>1.</strong> Ti contatteremo entro 24 ore</li>
                                     <li><strong>2.</strong> Recati presso <strong>{selectedBranch?.label}</strong></li>
                                     <li><strong>3.</strong> Porta un documento d'identità</li>
-                                    <li><strong>4.</strong> Effettua il pagamento di <strong>€{selectedService?.price}</strong></li>
+                                    <li><strong>4.</strong> Effettua il pagamento in sede</li>
                                 </ol>
                             </div>
                             <div className="flex gap-4 justify-center">
@@ -170,7 +168,6 @@ export default function IscrizioneContent() {
                                                 className={`p-4 rounded-xl border-2 text-left ${formData.serviceId === s.id ? 'border-blue-500 bg-blue-50' : 'border-gray-200 hover:border-gray-300'}`}>
                                                 <span className="text-2xl mr-2">{s.icon}</span>
                                                 <span className="font-semibold">{s.name}</span>
-                                                <span className="block text-sm text-blue-600">€{s.price}</span>
                                             </button>
                                         ))}
                                     </div>
@@ -206,7 +203,7 @@ export default function IscrizioneContent() {
                             <div className="space-y-6">
                                 <h2 className="text-xl font-bold mb-4">Riepilogo</h2>
                                 <div className="bg-gray-50 rounded-xl p-6">
-                                    <p><strong>Corso:</strong> {selectedService?.name} - €{selectedService?.price}</p>
+                                    <p><strong>Corso:</strong> {selectedService?.name}</p>
                                     <p><strong>Sede:</strong> {selectedBranch?.label}</p>
                                     <p><strong>Nome:</strong> {formData.firstName} {formData.lastName}</p>
                                     <p><strong>Email:</strong> {formData.email}</p>
@@ -217,7 +214,7 @@ export default function IscrizioneContent() {
                                     <Checkbox label={<>Accetto i <Link href="/termini" className="text-blue-600">Termini</Link> *</>} checked={formData.terms} onChange={(e) => setFormData({ ...formData, terms: e.target.checked })} />
                                 </div>
                                 <div className="bg-green-50 rounded-xl p-4">
-                                    <p className="text-green-800"><strong>💰 Pagamento in sede:</strong> €{selectedService?.price}</p>
+                                    <p className="text-green-800"><strong>💰 Pagamento in sede</strong></p>
                                 </div>
                             </div>
                         )}

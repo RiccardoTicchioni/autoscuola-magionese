@@ -9,19 +9,6 @@ export const metadata: Metadata = {
 
 const patenti = [
     {
-        id: 'am',
-        name: 'Patente AM',
-        subtitle: 'Ciclomotori e Quadricicli Leggeri',
-        description: 'La patente AM ti permette di guidare ciclomotori a due ruote, ciclomotori a tre ruote e quadricicli leggeri con velocità massima di 45 km/h.',
-        minAge: 14,
-        icon: '🛵',
-        priceFrom: 350,
-        duration: '1-2 mesi',
-        includes: ['Corso teoria', 'Esercitazioni pratiche', 'Esame teoria', 'Esame pratica'],
-        popular: false,
-        color: 'from-blue-400 to-blue-600',
-    },
-    {
         id: 'a1',
         name: 'Patente A1',
         subtitle: 'Motocicli fino a 125cc',
@@ -116,7 +103,7 @@ export default function PatentiPage() {
                         Scegli la tua patente
                     </h1>
                     <p className="text-xl text-white/80 max-w-3xl mx-auto">
-                        Dalla AM per ciclomotori alla BE per rimorchi pesanti.
+                        Dalla A1 per motocicli alla BE per rimorchi pesanti.
                         Trova il corso giusto per le tue esigenze.
                     </p>
                 </div>
@@ -151,15 +138,15 @@ export default function PatentiPage() {
                                         <p className="text-sm text-primary-600 font-medium mb-3">{patente.subtitle}</p>
                                         <p className="text-gray-600 text-sm mb-4 line-clamp-2">{patente.description}</p>
 
-                                        {/* Price and Duration */}
+                                        {/* Duration */}
                                         <div className="flex items-center justify-between pt-4 border-t border-gray-100">
                                             <div>
-                                                <p className="text-xs text-gray-500">A partire da</p>
-                                                <p className="text-xl font-bold text-gray-900">€{patente.priceFrom}</p>
+                                                <p className="text-xs text-gray-500">Durata media</p>
+                                                <p className="text-lg font-bold text-gray-900">{patente.duration}</p>
                                             </div>
                                             <div className="text-right">
-                                                <p className="text-xs text-gray-500">Durata</p>
-                                                <p className="text-sm font-medium text-gray-700">{patente.duration}</p>
+                                                <p className="text-xs text-gray-500">Età minima</p>
+                                                <p className="text-sm font-medium text-gray-700">{patente.minAge} anni</p>
                                             </div>
                                         </div>
 
@@ -196,7 +183,6 @@ export default function PatentiPage() {
                                     <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">Patente</th>
                                     <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">Cosa puoi guidare</th>
                                     <th className="px-6 py-4 text-center text-sm font-semibold text-gray-900">Età minima</th>
-                                    <th className="px-6 py-4 text-center text-sm font-semibold text-gray-900">Prezzo da</th>
                                     <th className="px-6 py-4 text-center text-sm font-semibold text-gray-900">Durata</th>
                                     <th className="px-6 py-4"></th>
                                 </tr>
@@ -212,9 +198,6 @@ export default function PatentiPage() {
                                         </td>
                                         <td className="px-6 py-4 text-sm text-gray-600">{patente.subtitle}</td>
                                         <td className="px-6 py-4 text-center text-sm text-gray-900">{patente.minAge} anni</td>
-                                        <td className="px-6 py-4 text-center">
-                                            <span className="font-semibold text-gray-900">€{patente.priceFrom}</span>
-                                        </td>
                                         <td className="px-6 py-4 text-center text-sm text-gray-600">{patente.duration}</td>
                                         <td className="px-6 py-4">
                                             <Link href={`/patenti/${patente.id}`}>
