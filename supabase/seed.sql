@@ -13,7 +13,7 @@ INSERT INTO branches (id, name, slug, address, city, postal_code, phone, email, 
     'Via Roma 123',
     'Magione',
     '06063',
-    '075 123 4567',
+    '330 522 814',
     'centro@autoscuolamagionese.it',
     '{
         "monday": {"open": "09:00", "close": "13:00", "break_start": "13:00", "break_end": "15:00"},

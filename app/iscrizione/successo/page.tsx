@@ -67,7 +67,7 @@ export default function SuccessoPage() {
 
                         {/* Contact Info */}
                         <p className="mt-6 text-sm text-gray-500">
-                            Hai domande? Chiamaci al <a href="tel:+390751234567" className="text-primary-600 hover:underline">075 123 4567</a>
+                            Hai domande? Chiamaci al <a href="tel:+39330522814" className="text-primary-600 hover:underline">330 522 814</a>
                         </p>
                     </CardContent>
                 </Card>

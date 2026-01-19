@@ -8,7 +8,7 @@ interface WhatsAppButtonProps {
 }
 
 export function WhatsAppButton({
-    phoneNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '+393331234567',
+    phoneNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '+39330522814',
     message = 'Ciao! Vorrei informazioni sui vostri corsi.',
 }: WhatsAppButtonProps) {
     const whatsappLink = getWhatsAppLink(phoneNumber, message);

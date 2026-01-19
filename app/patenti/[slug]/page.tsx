@@ -518,9 +518,9 @@ export default async function PatentePage({ params }: Props) {
                                     <p className="text-gray-600 text-sm mb-4">
                                         Chiamaci o scrivici per maggiori informazioni
                                     </p>
-                                    <a href="tel:+390751234567">
+                                    <a href="tel:+39330522814">
                                         <Button variant="outline" className="w-full">
-                                            075 123 4567
+                                            330 522 814
                                         </Button>
                                     </a>
                                 </CardContent>
